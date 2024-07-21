@@ -1,0 +1,14 @@
+.container{
+    border: 4px solid plum;
+    display: flex;
+    flex-direction: row;
+    justify-content:content;
+    align-items: center;   
+}
+.container > div > img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
