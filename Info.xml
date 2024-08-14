@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travelAdventures>
+    <destination>
+        <name>Everest Base Camp</name>
+        <country>Nepal</country>
+        <description>A challenging trek to the base camp of the world's highest peak.</description>
+    </destination>
+    <destination>
+        <name>Grand Canyon</name>
+        <country>USA</country>
+        <description>A breathtaking view of the immense Grand Canyon.</description>
+    </destination>
+</travelAdventures>

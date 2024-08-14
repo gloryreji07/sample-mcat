@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="logo.png" alt="Logo" class="logo">
+            <a class="navbar-brand" href="#"></a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                            >Home <span class="sr-only">(current)</span>
+                            <i class="fas fa-home"></i></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery
+                            <i class="fa fa-photo" style="font: size 30px;color:aliceblue"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Map
+                            <i class="fa fa-map-marker" style="font-size:22px;color:aliceblue"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Review</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <style>
+        .logo {
+            height:100px; /* Adjust height as needed */
+            
+        }
+        .grid-container {
+            display: grid;
+            padding: 50px;
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+        }
+        .grid-item {
+            width: 300px;
+            height: 200px;
+            align-items: center;
+            /* border: solid black; */
+        }
+
+        img {
+            width: 330px;
+            height: 200px;
+            /* align-items: ; */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="./img/adventure.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/boat.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/bungee.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/camp.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/hike.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/paragliding.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/skydiv.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/scuba.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/boating.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/camping.jpg" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/Hiking.webp" />
+        </div>
+        <div class="grid-item">
+            <img src="./img/roadtrip.jpg" />
+        </div>
+    </div>
+    <section>
+
+        <!-- Add buttons to trigger the modal dialogs -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">Open Modal 1</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">Open Modal 2</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">Open Modal 3</button>
+      
+        <!-- Modal dialogs -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel1">Hiking Adventure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="/img/hiking1.jpg" alt="Hiking Adventure" class="img-fluid mb-3">
+                <p><strong>Location:</strong> Rocky Mountains, Colorado</p>
+                <p><strong>Review:</strong> A thrilling hiking experience with breathtaking views. The trails are challenging but rewarding.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel2">Camping Experience</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="/img/camping.jpg" alt="Camping Experience" class="img-fluid mb-3">
+                <p><strong>Location:</strong> Yellowstone National Park, Wyoming</p>
+                <p><strong>Review:</strong> A serene camping experience surrounded by nature. The perfect spot for stargazing and campfire stories.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel3">Extreme Sports</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="/img/skydiv.jpg" alt="Extreme Sports" class="img-fluid mb-3">
+                <p><strong>Location:</strong> Moab, Utah</p>
+                <p><strong>Review:</strong> An adrenaline-pumping experience with activities like sky diving and scuba diving. Not for the faint-hearted!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+</body>
+</html>
